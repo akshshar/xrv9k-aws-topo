@@ -1,5 +1,5 @@
 variable "xr_version" {
-  default = "732_ena"
+  default = "631"
 }
 
 variable "ssh_key_public" {
