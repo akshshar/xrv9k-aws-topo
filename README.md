@@ -1,6 +1,9 @@
 # xrv9k-aws-topo
 
+Want to build your own AWS compatible AMI image for xrv9k ? Take look here:  <https://github.com/akshshar/xrv9k-amibuilder>
+
 Terraform makes it super easy to spin up simple and complex network topologies on AWS with xrv9k instances.
+
 
 ## Requirements: Setting up the Client Machine (Laptop/Server)
 
