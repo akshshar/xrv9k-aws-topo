@@ -31,6 +31,7 @@ and keep them ready.
 
 ### Clone the git repo
 
+```
 aks::~$git clone https://github.com/akshshar/xrv9k-aws-topo
 Cloning into 'xrv9k-aws-topo'...
 remote: Enumerating objects: 19, done.
@@ -57,7 +58,7 @@ aks::~/xrv9k-aws-topo$tree .
 
 3 directories, 8 files
 aks::~/xrv9k-aws-topo$
-
+```
 
 
 ### Set up the AWS credentials
