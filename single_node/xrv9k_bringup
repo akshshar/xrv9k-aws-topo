@@ -18,7 +18,7 @@ else
 fi
 
 # Init Terraform to run against AWS EC2 before launching xrv9k instance 
-docker run -it --rm --name ami_builder -v ~/.ssh:/root/.ssh \
+docker run -it --rm --name ami_builder -v ${PWD}/ssh:/root/.ssh \
            -v ${PWD}/aws:/root/.aws \
            -v ${PWD}/ssh_config:/root/.ssh/config  \
            -v ${PWD}:/root/terraform \
@@ -36,7 +36,7 @@ else
     echo -e "${GREEN}Starting launch ... ${NC}"
     echo "####################################################"
 
-    docker run -it --rm --name ami_builder -v ~/.ssh:/root/.ssh \
+    docker run -it --rm --name ami_builder -v ${PWD}/ssh:/root/.ssh \
                -v ${PWD}/aws:/root/.aws \
                -v ${PWD}/ssh_config:/root/.ssh/config  \
                -v ${PWD}:/root/terraform \
@@ -45,7 +45,7 @@ else
     if [ $? -ne 0 ]; then
         echo -e "${RED}Failed to apply terraform plan for xrv9k instance bringup, proceed to destroy as applicable ...${NC}"
         # Destroy the xrv9k instance
-        docker run -it --rm --name ami_builder -v ~/.ssh:/root/.ssh \
+        docker run -it --rm --name ami_builder -v ${PWD}/ssh:/root/.ssh \
                    -v ${PWD}/aws:/root/.aws \
                    -v ${PWD}/ssh_config:/root/.ssh/config  \
                    -v ${PWD}:/root/terraform \
